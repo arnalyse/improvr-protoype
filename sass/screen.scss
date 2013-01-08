@@ -1,0 +1,116 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+
+}
+
+.container-vorsatz {
+	// @include clearfix;
+	margin: 1rem 0rem 2rem;
+	padding: 2rem;
+	// margin-top: 4rem;
+	// margin-bottom: 4rem;
+	@include box-shadow(#cccccc 0 1rem 2rem -0.5rem);
+	/* parameters: $color, $hoff, $voff, $blur, $spread, $inset */
+
+	font: {
+		family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+		weight: bold;
+	}
+
+}
+
+.vorsatz-ansage {
+	color: #333333;
+	font-size: 5.4rem;
+	margin-bottom: 3rem;
+	word-wrap: break-word;
+}
+
+/******************************/
+
+.flex-top {
+	@include display-box;
+	@include box-align(start);
+	@include box-pack(end);
+
+	.for,
+	.days {
+		margin: 5.5rem 1rem 0;
+	}
+}
+
+.flex-right {
+	@include display-box;
+	@include box-align(end);
+	@include box-pack(end);
+
+	> span {
+		@include box-align(top);
+	}
+
+/* 	.for,
+	.days {
+		line-height: 2rem;
+	}
+ */
+}
+
+.margin-correct {
+	margin-left: 1rem;
+	margin-bottom: 1rem;
+}
+
+section.vorsatz-ergebnis {
+	@include display-box;
+	@include box-pack(end);
+	@include box-align(end);
+}
+
+.vorsatz-ergebnis {
+	margin-bottom: 1rem;
+	// margin-left: 38.196601113202156%; // Goldener Schnitt, Bitches
+	color: #ffcc00;
+	text-shadow: 0.4rem 0.4rem 3.0rem #CCCCCC;
+}
+
+
+.for,
+.days,
+.vorsatz-dauer {
+}
+
+.for,
+.days {
+	font-size: 3.2rem
+}
+
+
+.for {
+
+}
+
+.vorsatz-dauer {
+	font-size: 12.0rem;
+}
+
+.days {
+
+}
+
+/******************************/
+
+footer {
+	height: 10rem;
+}
